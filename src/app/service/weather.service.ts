@@ -13,7 +13,7 @@ export class WeatherService {
   }
 
   getWeatherForCity(city: string): Observable<any> {
-    const path = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=236c8bb6389d14fe979945b8805be0e1`;
+    const path = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=`;
     return this.http.get(path);
   }
 }
