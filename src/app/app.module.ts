@@ -11,6 +11,9 @@ import {RouterModule, Routes} from "@angular/router";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { WeatherReportComponent } from './weather-report/weather-report.component';
 import {MatCardModule} from "@angular/material/card";
+import {FlexLayoutModule} from "@angular/flex-layout";
+import { CardFancyComponent } from './components/card-fancy/card-fancy.component';
+import {MatButtonModule} from "@angular/material/button";
 
 const routes: Routes = [
   {
@@ -26,7 +29,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    WeatherReportComponent
+    WeatherReportComponent,
+    CardFancyComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,9 @@ const routes: Routes = [
     MatOptionModule,
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    FlexLayoutModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
