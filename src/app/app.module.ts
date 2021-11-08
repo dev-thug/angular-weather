@@ -14,6 +14,7 @@ import {MatCardModule} from "@angular/material/card";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { CardFancyComponent } from './components/card-fancy/card-fancy.component';
 import {MatButtonModule} from "@angular/material/button";
+import {HttpClientModule} from "@angular/common/http";
 
 const routes: Routes = [
   {
@@ -43,7 +44,8 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatCardModule,
     FlexLayoutModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

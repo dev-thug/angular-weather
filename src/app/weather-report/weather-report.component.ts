@@ -14,14 +14,20 @@ export class WeatherReportComponent implements OnInit {
 
   today: Date = new Date();
   locationName!: string;
+  data$!: Observable<any>;
 
   constructor(
-    // private weatherService: WeatherService,
+    private weatherService: WeatherService,
     private route: ActivatedRoute
   ) {
   }
 
   ngOnInit(): void {
+    this.data$ = this.route.params.pipe(
+      map(params => params["locationName"]),
+      filter(name => !!name),
+      concatMap(name => this.weatherService.getWeatherForCity(name))
+    )
     this.locationName = this.route.snapshot.params['locationName']
   }
 
