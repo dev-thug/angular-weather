@@ -1,15 +1,22 @@
 <mat-toolbar color="primary">
   날씨 앱
 </mat-toolbar>
-<div class="content">
-  <mat-form-field>
-    <mat-label>도시</mat-label>
-    <mat-select [formControl]="cityControl">
-      <mat-option *ngFor="let city of cities" [value]="city">{{city}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <br>
-  <router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      Main content here!
 
-<!--  <app-card-fancy></app-card-fancy>-->
-</div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!--<mat-form-field>-->
+<!--  <mat-label>도시</mat-label>-->
+<!--  <mat-select [formControl]="cityControl">-->
+<!--    <mat-option *ngFor="let city of cities" [value]="city">{{city}}</mat-option>-->
+<!--  </mat-select>-->
+<!--</mat-form-field>-->
+<!--<br>-->
+<!--<router-outlet></router-outlet>-->

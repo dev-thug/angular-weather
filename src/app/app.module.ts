@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
@@ -9,12 +9,13 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {MatOptionModule} from "@angular/material/core";
 import {RouterModule, Routes} from "@angular/router";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { WeatherReportComponent } from './weather-report/weather-report.component';
+import {WeatherReportComponent} from './weather-report/weather-report.component';
 import {MatCardModule} from "@angular/material/card";
 import {FlexLayoutModule} from "@angular/flex-layout";
-import { CardFancyComponent } from './components/card-fancy/card-fancy.component';
+import {CardFancyComponent} from './components/card-fancy/card-fancy.component';
 import {MatButtonModule} from "@angular/material/button";
 import {HttpClientModule} from "@angular/common/http";
+import {MatSidenavModule} from "@angular/material/sidenav";
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: ':locationName',
     component: WeatherReportComponent
+  },
+  {
+    path: 'components/card',
+    component: CardFancyComponent
   }
 ];
 
@@ -45,9 +50,11 @@ const routes: Routes = [
     MatCardModule,
     FlexLayoutModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

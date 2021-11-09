@@ -17,8 +17,8 @@ export class WeatherService {
     const path = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=236c8bb6389d14fe979945b8805be0e1`;
     return this.http.get(path).pipe(
       map(data => ({
-        ...data
-        // image: `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png
+        ...data,
+        // image: `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
       }))
     );
   }
