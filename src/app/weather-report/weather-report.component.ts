@@ -28,7 +28,6 @@ export class WeatherReportComponent implements OnInit {
       filter(name => !!name),
       concatMap(name => this.weatherService.getWeatherForCity(name))
     )
-    console.log(this.data$)
     this.locationName = this.route.snapshot.params['locationName']
   }
 

@@ -12,7 +12,6 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {WeatherReportComponent} from './weather-report/weather-report.component';
 import {MatCardModule} from "@angular/material/card";
 import {FlexLayoutModule} from "@angular/flex-layout";
-import {CardFancyComponent} from './components/card-fancy/card-fancy.component';
 import {MatButtonModule} from "@angular/material/button";
 import {HttpClientModule} from "@angular/common/http";
 import {MatSidenavModule} from "@angular/material/sidenav";
@@ -27,18 +26,13 @@ const routes: Routes = [
   {
     path: ':locationName',
     component: WeatherReportComponent
-  },
-  {
-    path: 'components/card',
-    component: CardFancyComponent
   }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    WeatherReportComponent,
-    CardFancyComponent
+    WeatherReportComponent
   ],
   imports: [
     BrowserModule,
